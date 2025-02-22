@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>iCoder</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">iCoder</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Topics
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/Courses/web_tech.html"
+                    >Web Development</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="/Courses/c_cpp.html">C/C++</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="support.html">Support</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="write.html">Write for us</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact us</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+          <div class="mx-2">
+            <button
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+            <button
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#signUpModal"
+            >
+              SignUp
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="loginModalLabel">
+              Login to iCoder
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="Password"
+                />
+                <label for="floatingPassword">Password</label>
+              </div>
+
+              <div class="form-check text-start my-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="remember-me"
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Remember me
+                </label>
+              </div>
+              <button class="btn btn-primary w-50 py-2 m-3" type="submit">
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal login-->
+
+    <!-- Modal Signup-->
+    <div
+      class="modal fade"
+      id="signUpModal"
+      tabindex="-1"
+      aria-labelledby="signUpModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="signUpModalLabel">
+              Get an iCoder Account
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="Set Password"
+                />
+                <label for="floatingPassword">Password</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="cfloatingPassword"
+                  placeholder="Confirm Password"
+                />
+                <label for="cfloatingPassword">Confirm Password</label>
+              </div>
+
+              <button class="btn btn-primary w-50 py-2 m-3" type="submit">
+                Create Account
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Signup-->
+
+
+
+<!--Alert -->
+<div  style="text-align: center;" class="alert alert-danger alert-dismissible fade show my-3 " role="alert">
+  <strong>Alert! </strong> For support iCoder’s free resources. <button class="btn btn-danger"><a class="link-underline-opacity-0 link-light" href="support.html">Support iCoder</a></button>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<!--Alert -->
+
+
+
+    <!--Slider-->
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner carousel-fade">
+        <div class="carousel-item active">
+          <img src="img/carousel01.jpg" class="d-block w-100" alt="..." />
+          <div
+            class="carousel-caption d-none d-md-block"
+            style="padding-bottom: 100px"
+          >
+            <h2>Welcome to iCoder</h2>
+            <p>Technology Articles , Development and Trends</p>
+            <button class="btn btn-danger" style="margin: 10px">
+              Roadmap</button
+            ><button class="btn btn-primary" style="margin: 10px">
+              Web Development</button
+            ><button class="btn btn-success" style="margin: 10px">
+              Tech News
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/carousel02.jpg" class="d-block w-100" alt="..." />
+          <div
+            class="carousel-caption d-none d-md-block"
+            style="padding-bottom: 100px"
+          >
+            <h2>The Best Coding Blog</h2>
+            <p>Technology Articles , Development and Trends</p>
+            <button  class="btn btn-danger" style="margin: 10px">
+              Roadmap</button
+            ><button class="btn btn-primary" style="margin: 10px">
+              Web Development</button
+            ><button class="btn btn-success" style="margin: 10px">
+              Tech News
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/carousel03.jpg" class="d-block w-100" alt="..." />
+          <div
+            class="carousel-caption d-none d-md-block"
+            style="padding-bottom: 100px"
+          >
+            <h2>Award Winning Blog</h2>
+            <p>Technology Articles , Development and Trends</p>
+            <button class="btn btn-danger" style="margin: 10px">
+              Roadmap</button
+            ><button class="btn btn-primary" style="margin: 10px">
+              Web Development</button
+            ><button class="btn btn-success" style="margin: 10px">
+              Tech News
+            </button>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--Slider-->
+
+    <!--Topics-->
+    <div class="container my-4">
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary-emphasis"
+                >India</strong
+              >
+              <h3 class="mb-0">Smart India Hackathon</h3>
+              <div class="mb-1 text-body-secondary">Nov 12</div>
+              <p class="card-text mb-auto">
+                Nationwide initiative in India aimed at promoting innovation and problem-solving among students.
+              </p>
+              <a
+                href="Articles/SIH_2024.html"
+                class="icon-link gap-1 icon-link-hover stretched-link"
+              >
+                Know more
+                <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="img/SIH-Logo.png" width="200" height="250" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success-emphasis"
+                >Design</strong
+              >
+              <h3 class="mb-0">Learn Web Design</h3>
+              <div class="mb-1 text-body-secondary">Nov 11</div>
+              <p class="mb-auto">
+                Creating and organizing the visual and functional elements of a website
+              </p>
+              <a
+                href="Articles/Design.html"
+                class="icon-link gap-1 icon-link-hover stretched-link"
+              >
+                Continue reading
+                <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="img/about01.jpg" width="200" height="250" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-4">
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-warning-emphasis"
+                >World</strong
+              >
+              <h3 class="mb-0">Frontend</h3>
+              <div class="mb-1 text-body-secondary">Nov 12</div>
+              <p class="card-text mb-auto">
+                Frontend development involves creating the user interface and experience of a website or web application, focusing on the elements that users interact with directly.
+              </p>
+              <a
+                href="Articles/Frontend.html"
+                class="icon-link gap-1 icon-link-hover stretched-link"
+              >
+                Continue reading
+                <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="img/Frontend.png" width="200" height="250" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-danger-emphasis"
+                >Roadmap</strong
+              >
+              <h3 class="mb-0">Software Engineer</h3>
+              <div class="mb-1 text-body-secondary">Nov 11</div>
+              <p class="mb-auto">
+                Master programming, data structures, algorithms. Learn system design, databases, cloud computing. Focus on problem-solving, collaboration, and continuous learning.
+              </p>
+              <a
+                href="Articles/roadmap.html"
+                class="icon-link gap-1 icon-link-hover stretched-link"
+              >
+                Continue reading
+                <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="img/Roadmap.jpeg" width="200" height="250" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Topics-->
+
+    <!--Footer Start-->
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>
+        © 2024 iCoder. All rights reserved. <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#PrivacyModal">Privacy</button> &
+        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#TermsModal">Terms</button>
+      </p>
+    </footer>
+    <!--Footer End-->
+
+
+<!-- Modal Privacy-->
+<div class="modal fade" id="PrivacyModal" tabindex="-1" aria-labelledby="PrivacyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="PrivacyModalLabel">Privacy and Policy</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <main role="main" class="container">
+          <h1 class="mt-2">Privacy Policy</h1>
+          <p class="lead">Effective Date:2024</p>
+          
+          <section class="mt-4">
+              <h2>1. Information We Collect</h2>
+              <ul>
+                  <li><strong>Personal Information:</strong> When you register, subscribe, or interact with our website, we may collect personal information such as your name, email address, and contact details.</li>
+                  <li><strong>Usage Data:</strong> We collect information about how you use our website, including IP addresses, browser types, pages visited, and other usage statistics.</li>
+                  <li><strong>Cookies and Tracking Technologies:</strong> We use cookies and similar technologies to enhance your browsing experience and analyze website traffic.</li>
+              </ul>
+          </section>
+  
+          <section class="mt-4">
+              <h2>2. How We Use Your Information</h2>
+              <ul>
+                  <li><strong>To Provide and Improve Services:</strong> We use your information to operate our website, respond to inquiries, and improve our services.</li>
+                  <li><strong>To Personalize User Experience:</strong> We may use your data to customize content and provide recommendations based on your interests.</li>
+                  <li><strong>To Communicate with You:</strong> We may send you updates, newsletters, and promotional information related to iCoder. You can opt out at any time.</li>
+              </ul>
+          </section>
+  
+          <section class="mt-4">
+              <h2>3. How We Protect Your Information</h2>
+              <p>We implement appropriate technical and organizational measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.</p>
+          </section>
+  
+          <section class="mt-4">
+              <h2>4. Sharing Your Information</h2>
+              <ul>
+                  <li><strong>Third-Party Services:</strong> We may share your information with third-party service providers who assist us in operating our website and providing services, subject to confidentiality agreements.</li>
+                  <li><strong>Legal Requirements:</strong> We may disclose your information if required by law or to protect our rights and the safety of our users.</li>
+              </ul>
+          </section>
+  
+          <section class="mt-4">
+              <h2>5. Your Rights</h2>
+              <ul>
+                  <li><strong>Access and Correction:</strong> You have the right to access and update your personal information.</li>
+                  <li><strong>Opt-Out:</strong> You can opt out of receiving promotional communications by following the unsubscribe instructions provided in those communications.</li>
+              </ul>
+          </section>
+  
+          <section class="mt-4">
+              <h2>6. Changes to This Privacy Policy</h2>
+              <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the revised policy on our website.</p>
+          </section>
+  
+          <section class="mt-4">
+              <h2>7. Contact Us</h2>
+              <p>If you have any questions or concerns about this Privacy Policy, please contact us at <a href="contact.html">Contact Us</a>.</p>
+          </section>
+      </main>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Terms-->
+<div class="modal fade" id="TermsModal" tabindex="-1" aria-labelledby="TermsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="TermsModalLabel">Terms of Services</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <main role="main" class="container">
+          <h1 class="mb-4 text-center">Terms of Service</h1>
+          <p class="lead text-center">Effective Date: 2024</p>
+          
+          <section class="mt-4">
+              <h2>1. Acceptance of Terms</h2>
+              <p>By using our website, you acknowledge that you have read, understood, and agree to these Terms of Service.</p>
+          </section>
+  
+          <section class="mt-4">
+              <h2>2. User Responsibilities</h2>
+              <ul>
+                  <li><strong>Account Security:</strong> You are responsible for maintaining the confidentiality of your account credentials and for all activities under your account.</li>
+                  <li><strong>Content Usage:</strong> You agree not to use our website for any unlawful purpose or in any way that may damage, disable, or impair the website.</li>
+              </ul>
+          </section>
+  
+          <section class="mt-4">
+              <h2>3. Intellectual Property</h2>
+              <p>All content on our website, including text, graphics, logos, and software, is the property of iCoder or its licensors and is protected by intellectual property laws. You may not reproduce, distribute, or create derivative works from our content without permission.</p>
+          </section>
+  
+          <section class="mt-4">
+              <h2>4. User Content</h2>
+              <ul>
+                  <li><strong>Ownership:</strong> You retain ownership of any content you submit to our website. However, by submitting content, you grant us a worldwide, royalty-free, and non-exclusive license to use, modify, and distribute it.</li>
+                  <li><strong>Prohibited Content:</strong> You agree not to submit content that is illegal, defamatory, or infringing on the rights of others.</li>
+              </ul>
+          </section>
+  
+          <section class="mt-4">
+              <h2>5. Disclaimers and Limitations of Liability</h2>
+              <ul>
+                  <li><strong>No Warranties:</strong> Our website is provided "as is" and "as available" without warranties of any kind. We do not guarantee the accuracy, completeness, or reliability of the content.</li>
+                  <li><strong>Limitation of Liability:</strong> We are not liable for any indirect, incidental, or consequential damages arising from your use of our website.</li>
+              </ul>
+          </section>
+  
+          <section class="mt-4">
+              <h2>6. Termination</h2>
+              <p>We reserve the right to terminate or suspend your access to our website at our sole discretion, without notice, for any reason, including violation of these Terms of Service.</p>
+          </section>
+  
+          <section class="mt-4">
+              <h2>7. Governing Law</h2>
+              <p>These Terms of Service are governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law principles.</p>
+          </section>
+  
+          <section class="mt-4">
+              <h2>8. Changes to Terms</h2>
+              <p>We may update these Terms of Service from time to time. Any changes will be posted on our website, and your continued use of the site constitutes acceptance of the new terms.</p>
+          </section>
+  
+          <section class="mt-4">
+              <h2>9. Contact Us</h2>
+              <p>If you have any questions or concerns about this Privacy Policy, please contact us at <a href="contact.html">Contact Us</a>.</p>
+          </section>
+      </main>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
